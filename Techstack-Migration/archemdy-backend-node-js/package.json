@@ -1,0 +1,16 @@
+{
+  "name": "archemy-node-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "check": "node --check src/server.mjs && node --check src/config/rds-config.mjs && node --check src/routes.mjs && node --check src/data/seed.mjs && node --check src/http/http-utils.mjs && node --check src/repositories/mock-repository.mjs && node --check src/repositories/rds-repository.mjs && node --check src/services/catalog-service.mjs && node --check src/services/acl-service.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "mysql2": "^3.15.3"
+  }
+}

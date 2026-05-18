@@ -1,0 +1,18 @@
+{
+  "name": "archemy-admin-acl-handler",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AWS Lambda admin ACL and Cognito invite handler for Archemy.",
+  "main": "src/index.js",
+  "scripts": {
+    "check": "node --check src/index.js && node --check src/aclStore.js && node --check src/cognitoHandler.js && node --check src/http.js && node --check src/permissions.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.826.0",
+    "@aws-sdk/client-dynamodb": "^3.826.0",
+    "@aws-sdk/lib-dynamodb": "^3.826.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

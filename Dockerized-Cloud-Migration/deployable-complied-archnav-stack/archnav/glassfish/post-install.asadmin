@@ -1,0 +1,11 @@
+create-jvm-options -XX\\:MaxPermSize=512m
+create-jvm-options -Doracle.mds.cache=simple
+create-jvm-options -Dfortress.host=archnav-apacheds
+create-jvm-options -Dfortress.port=10389
+create-jvm-options -Dfortress.admin.user=uid\\=admin,ou\\=system
+create-jvm-options -Dfortress.admin.pw=secret
+set configs.config.server-config.network-config.network-listeners.network-listener.http-listener-1.port=9999
+create-jdbc-connection-pool --datasourceclassname=com.mysql.cj.jdbc.MysqlDataSource --restype=javax.sql.DataSource --property user=archemy:password=oracle123:DatabaseName=archemy:ServerName=archnav-mysql:portNumber=3306:useSSL=false:allowPublicKeyRetrieval=true MySQLConnPool
+create-jdbc-resource --connectionpoolid=MySQLConnPool jdbc/MySQLDataSource
+create-jdbc-resource --connectionpoolid=MySQLConnPool jdbc/archemyapp
+create-jdbc-resource --connectionpoolid=MySQLConnPool jdbc/Connection1DS
