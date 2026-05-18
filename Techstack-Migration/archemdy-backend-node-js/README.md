@@ -29,7 +29,7 @@ The RDS connection is currently hardcoded in `src/config/rds-config.mjs` for qui
 - User: `admin`
 - Database: `archemy`
 
-Before ECS/Lambda deployment, move these values to Secrets Manager or environment variables.
+
 
 ## Useful endpoints
 
@@ -43,14 +43,6 @@ Before ECS/Lambda deployment, move these values to Secrets Manager or environmen
 - `POST /api/users`, `PUT /api/users/:id`, `DELETE /api/users/:id`
 - `POST /api/roles`, `PUT /api/roles/:id`, `DELETE /api/roles/:id`
 
-## Auth placeholder
-
-The server accepts:
-
-- `Authorization: Bearer <jwt>` and decodes the base64 JWT payload for `sub`, `username`, `cognito:username`, `custom:userId`, `custom:acl`, or `acl`.
-- `x-mock-user: admin.user` for local development.
-
-Real Cognito verification should validate issuer, audience, signature, token use, and expiry using the user pool JWKS.
 
 ## Docker
 

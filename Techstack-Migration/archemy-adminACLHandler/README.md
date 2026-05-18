@@ -95,7 +95,7 @@ Supported GET `queryType` values:
 - `get-my-acl`
 - `get-default-acl`
 
-For the demo frontend, `get-acl-by-user` is intentionally readable by `userId` without forwarding a Cognito token. Lock this down later by using `get-my-acl` behind an API Gateway Cognito authorizer.
+
 
 
 
